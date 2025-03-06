@@ -203,6 +203,7 @@
                 document.getElementById("MAT").style.display = "block";                
                 document.getElementById("TBL").style.display = "none";
                 document.getElementById("STS").style.display = "none";
+
             }
             else if (val == "2") {
                 document.getElementById("MAT").style.display = "none";                
@@ -280,6 +281,7 @@
                     <td><a href="#Matches" class="Matches-active" onclick="SchangeContent1(1)">MATCHES</a></td>
                     <td><a href="#TABLE" class="TABLE-active" onclick="SchangeContent1(2)">TABLE</a></td>   
                     <td><a href="#STATS" class="STATS-active" onclick="SchangeContent1(3)">STATS</a></td> 
+                    <asp:Label ID="Loginname" runat="server"></asp:Label>
                     </tr>
             </table>
             </div>
@@ -300,135 +302,7 @@
                 <div id="HistMat" class="box2">
                     <div id="Div38" runat="server" style="display:none"></div>
 
-                    <div class="MatBox1">
-                    T6 1 of 30
-                  <table class="auto-style1">
-                        <tr>
-                            <td rowspan="2"> <img src="IMAGE/India.jpg" height="55" width="55" /></td>
-                            <%--<td>Test</td>
-                            <td>Test</td>--%>
-                            <td id="dataRunT1" runat="server" ></td>
-                            <td id="dataRunT2" runat="server" ></td>
-                            
-                            <td rowspan="2"> <img src="IMAGE/India.jpg" height="55" width="55" /></td>
-                        </tr>
-                        <tr>
-                            <td id="dataOverT1" runat="server" ></td>
-                            <td id="dataOverT2" runat="server" ></td>
-                        </tr>
-                        <tr>
-                            <td id="dataRun_team1" runat="server"></td>
-                            <td id="DataWinStatement" runat="server" colspan="2"></td>
-                            <td id="dataRun_team2" runat="server"></td>
-                        </tr>
-                  </table>
-                    </div>
-
-
-                    <div class="MatBox1">
-                    T6 2 of 30
-                  <table class="auto-style1">
-                        <tr>
-                            <td rowspan="2"> <img src="IMAGE/India.jpg" height="55" width="55" /></td>
-                            <td>119/10</td>                            
-                            <td>120/3</td>
-                            <td rowspan="2"> <img src="IMAGE/India.jpg" height="55" width="55" /></td>
-                        </tr>
-                        <tr>
-                            <td>(19.3)</td>
-                            <td>(14.5)</td>
-                        </tr>
-                        <tr>                            
-                            <td>RCB</td>
-                            <td colspan="2">SRH win by 7 wiket</td>
-                            <td>SRH</td>                            
-                        </tr>
-                  </table>
-                    </div>
-
-                    <div class="MatBox1">
-                    T6 3 of 30
-                  <table class="auto-style1">
-                        <tr>
-                            <td rowspan="2"> <img src="IMAGE/India.jpg" height="55" width="55" /></td>
-                            <td>119/10</td>                            
-                            <td>120/3</td>
-                            <td rowspan="2"> <img src="IMAGE/India.jpg" height="55" width="55" /></td>
-                        </tr>
-                        <tr>
-                            <td>(19.3)</td>
-                            <td>(14.5)</td>
-                        </tr>
-                        <tr>                            
-                            <td>RCB</td>
-                            <td colspan="2">SRH win by 7 wiket</td>
-                            <td>SRH</td>                            
-                        </tr>
-                  </table>
-                    </div>
-
-                    <div class="MatBox1">
-                    T6 4 of 30
-                  <table class="auto-style1">
-                        <tr>
-                            <td rowspan="2"> <img src="IMAGE/India.jpg" height="55" width="55" /></td>
-                            <td>119/10</td>                            
-                            <td>120/3</td>
-                            <td rowspan="2"> <img src="IMAGE/India.jpg" height="55" width="55" /></td>
-                        </tr>
-                        <tr>
-                            <td>(19.3)</td>
-                            <td>(14.5)</td>
-                        </tr>
-                        <tr>                            
-                            <td>RCB</td>
-                            <td colspan="2">SRH win by 7 wiket</td>
-                            <td>SRH</td>                            
-                        </tr>
-                  </table>
-                    </div>
-
-                    <div class="MatBox1">
-                    T6 5 of 30
-                 <table class="auto-style1">
-                        <tr>
-                            <td rowspan="2"> <img src="IMAGE/India.jpg" height="55" width="55" /></td>
-                            <td>119/10</td>                            
-                            <td>120/3</td>
-                            <td rowspan="2"> <img src="IMAGE/India.jpg" height="55" width="55" /></td>
-                        </tr>
-                        <tr>
-                            <td>(19.3)</td>
-                            <td>(14.5)</td>
-                        </tr>
-                        <tr>                            
-                            <td>RCB</td>
-                            <td colspan="2">SRH win by 7 wiket</td>
-                            <td>SRH</td>                            
-                        </tr>
-                  </table>
-                    </div>
-
-                    <div class="MatBox1">
-                    T6 6 of 30
-                  <table class="auto-style1">
-                        <tr>
-                            <td rowspan="2"> <img src="IMAGE/India.jpg" height="55" width="55" /></td>
-                            <td>119/10</td>                            
-                            <td>120/3</td>
-                            <td rowspan="2"> <img src="IMAGE/India.jpg" height="55" width="55" /></td>
-                        </tr>
-                        <tr>
-                            <td>(19.3)</td>
-                            <td>(14.5)</td>
-                        </tr>
-                        <tr>                            
-                            <td>RCB</td>
-                            <td colspan="2">SRH win by 7 wiket</td>
-                            <td>SRH</td>                            
-                        </tr>
-                  </table>
-                    </div>
+                    <asp:Literal ID="MatchContainer" runat="server"></asp:Literal>
 
                 </div>
                     

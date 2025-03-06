@@ -38,7 +38,7 @@ namespace GPL
 
         protected void BindDropDownList()
         {
-            string query = "Select * from Points_Table";
+            string query = "Select * from GPL_Points_Table";
             {
                 // Create a SqlCommand object
                 using (SqlCommand command = new SqlCommand(query, sqlcon1))
@@ -55,7 +55,7 @@ namespace GPL
        
         protected void Team1_Select(object sender, EventArgs e)
         {
-            string query = "Select * from Points_Table";
+            string query = "Select * from GPL_Points_Table";
             {
                 // Create a SqlCommand object
                 using (SqlCommand command = new SqlCommand(query, sqlcon1))
@@ -77,7 +77,7 @@ namespace GPL
                     //}                  
                     
                     String DTT1 = DropDownList6.Text.ToString().Trim();
-                    string query2 = "Select * from Points_Table where Team_NAME<>'" + DTT1 + "'";
+                    string query2 = "Select * from GPL_Points_Table where Team_NAME<>'" + DTT1 + "'";
                     Session["Globl1"] = DTT1;
                     {
                         using (SqlCommand command1 = new SqlCommand(query2, sqlcon2))
@@ -112,7 +112,7 @@ namespace GPL
             String DTT2 = DropDownList7.Text.ToString().Trim();
             Session["Globl2"] = DTT2;
             string DTT1 = Session["Globl1"] as string;
-            string query3 = "Select * from Points_Table where Team_NAME in ('" + DTT1 + "','" + DTT2 + "')";
+            string query3 = "Select * from GPL_Points_Table where Team_NAME in ('" + DTT1 + "','" + DTT2 + "')";
             {
                 using (SqlCommand command2 = new SqlCommand(query3, sqlcon2))
                 {
@@ -141,9 +141,9 @@ namespace GPL
 
             if (BatBall == "BAT")
             {
-                //string query4 = "Select * from Player_dtls where Team_Name='" + DTT3 + "'";
-                string query4 = "Select * from Player_Dtls where Team_Name in ('" + DTT1 + "','" + DTT2 + "') and Team_Name = '" + DTT3 + "'";
-                string query6 = "Select * from Player_Dtls where Team_Name in ('" + DTT1 + "','" + DTT2 + "') and Team_Name != '" + DTT3 + "'";
+                //string query4 = "Select * from GPL_Player_Dtls where Team_Name='" + DTT3 + "'";
+                string query4 = "Select * from GPL_Player_Dtls where Team_Name in ('" + DTT1 + "','" + DTT2 + "') and Team_Name = '" + DTT3 + "'";
+                string query6 = "Select * from GPL_Player_Dtls where Team_Name in ('" + DTT1 + "','" + DTT2 + "') and Team_Name != '" + DTT3 + "'";
                 {
                     using (SqlCommand command3 = new SqlCommand(query4, sqlcon2))
                     using (SqlCommand command5 = new SqlCommand(query6, sqlcon2))
@@ -177,8 +177,8 @@ namespace GPL
             }
             else
             {
-                string query5 = "Select* from Player_Dtls where Team_Name in ('" + DTT1 + "','" + DTT2 + "') and Team_Name != '" + DTT3 + "'";
-                string query7 = "Select* from Player_Dtls where Team_Name in ('" + DTT1 + "','" + DTT2 + "') and Team_Name = '" + DTT3 + "'";
+                string query5 = "Select* from GPL_Player_Dtls where Team_Name in ('" + DTT1 + "','" + DTT2 + "') and Team_Name != '" + DTT3 + "'";
+                string query7 = "Select* from GPL_Player_Dtls where Team_Name in ('" + DTT1 + "','" + DTT2 + "') and Team_Name = '" + DTT3 + "'";
                 {
                     using (SqlCommand command4 = new SqlCommand(query5, sqlcon2))
                     using (SqlCommand command6 = new SqlCommand(query7, sqlcon2))
