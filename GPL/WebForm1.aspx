@@ -95,7 +95,7 @@
         <%--<Blur>--%>
         <%--<asp:Label ID=" LoginMessage" runat="server" Text=""></asp:Label>
         <asp:Label ID="PasswordlblMessage" runat="server" Text=""></asp:Label>--%>
-    <%--    Select * from SignUpDtls
+    <%--    Select * from GPL_SignUpDtls
 select * from Logindtls where Login_ID='1000'  and Password='Hrut'--%>
        
         <table class="auto-style12">
@@ -105,7 +105,7 @@ select * from Logindtls where Login_ID='1000'  and Password='Hrut'--%>
                     Login ID              
                 </td>
                 <td class="auto-style3">
-                    <asp:TextBox ID="LoginTxt" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="LoginTxt" runat="server" MaxLength="4" ToolTip="Enter your Login Id"></asp:TextBox>
                     <i class='bx bxs-user-pin'></i>
                 </td>
             </tr>
@@ -133,13 +133,21 @@ select * from Logindtls where Login_ID='1000'  and Password='Hrut'--%>
             </tr>
             <tr>
                 <%--<td class="auto-style2"><a href="#" class="auto-style2" onclick="Sign_Click">Sign up?</a></td>--%>
-                <td  class="auto-style9"><asp:Button  class="auto-style14" ID="SignUp" runat="server" onclick="Sign_Click" Text="Sign up?"/></td>
-                <td class="auto-style9"><a href="#" class="auto-style9">Forgot Password?</a></td>
+                <td  class="auto-style9">
+                    <asp:Button  class="auto-style14" ID="SignUp" runat="server" onclick="Sign_Click" Text="Sign up?" Enabled="false"/></td>
+               <%-- <td class="auto-style9"><a href="#" class="auto-style9">Forgot Password?</a></td>--%>
+                 <td class="auto-style9">
+                     <asp:Button runat="server" onclick="Frg_pass_Clk" ID="Frg_pass" class="auto-style9" text="Forgot Password?"/>
+
+                     <%--</asp:Button>--%>
+                 </td>
             </tr>
         </table>
         <table class="auto-style5">
             <tr>
-                <td class="auto-style7"></td>
+                <td class="auto-style7">
+                    <asp:CheckBox runat="server" ID="chk" Text="Default password (pass@123)" ForeColor="Yellow"  OnCheckedChanged="chk_CheckedChanged" AutoPostBack="true"/>
+                </td>
                 <td class="auto-style8"></td>
             </tr>
             <tr>

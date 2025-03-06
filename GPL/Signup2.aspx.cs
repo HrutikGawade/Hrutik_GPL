@@ -23,7 +23,7 @@ namespace GPL
         protected void Page_Load(object sender, EventArgs e)
         {
             sqlcon.Open();
-            Log = new SqlCommand("Select Max(login_ID)+1 as Result from SignUpDtls", sqlcon);
+            Log = new SqlCommand("Select Max(login_ID)+1 as Result from GPL_SignUpDtls", sqlcon);
             Log.ExecuteNonQuery();
             SqlDataAdapter da = new SqlDataAdapter(Log);
             DataSet ds = new DataSet();
@@ -46,7 +46,7 @@ namespace GPL
 
             if (TextBox5.Text == TextBox4.Text)
                 {
-                cmd = new SqlCommand("Insert into SignUpDtls (Login,Login_ID,Password,Com_Pass) values('" + DropDownList1.Text + "','" + TextBox1.Text + "','" + TextBox5.Text + "','" + TextBox4.Text + "')", sqlcon);
+                cmd = new SqlCommand("Insert into GPL_SignUpDtls (Login,Login_ID,Password,Com_Pass) values('" + DropDownList1.Text + "','" + TextBox1.Text + "','" + TextBox5.Text + "','" + TextBox4.Text + "')", sqlcon);
                 cmd.ExecuteNonQuery();
                 string script = "alert('Added');";
                 ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", script, true);

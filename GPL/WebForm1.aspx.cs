@@ -77,7 +77,7 @@ namespace GPL
                 else
                 {
                     conn.Open();
-                    cmd = new SqlCommand("select * from SignUpDtls where Login_ID = '" + DTT+"' and Password = '"+Password+"'", conn);
+                    cmd = new SqlCommand("select * from GPL_SignUpDtls where Login_ID = '" + DTT+"' and Password = '"+Password+"'", conn);
                     SqlDataAdapter sda = new SqlDataAdapter(cmd);
                     sda.Fill(dt);
                     if(dt.Rows.Count>0)
@@ -85,7 +85,7 @@ namespace GPL
                     //lblMessage.Text("Login Successfully");
                     //string script = "alert('Login Successfully');";
                     //ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", script, true);
-                    Response.Redirect("Matches.aspx");
+                    Response.Redirect("Matches.aspx?LGNM="+DTT.ToString());
 
                 }
                 else
@@ -98,11 +98,7 @@ namespace GPL
                 conn.Close();
 
                 }
-            //}
-
-            
-
-            
+            //}    
 
         }
 
@@ -115,6 +111,34 @@ namespace GPL
         {
             Response.Redirect("Signup2.aspx");
         }
+        protected void Frg_pass_Clk(object sender, EventArgs e)
+        {
+            PasswordID.BorderColor=System.Drawing.Color.Red;
+            LoginTxt.BorderColor=System.Drawing.Color.Red;
+            PasswordID.ForeColor=System.Drawing.Color.Red;
+            LoginTxt.ForeColor=System.Drawing.Color.Red;
+
+            LoginTxt.Focus();
+        }
+       
+        protected void chk_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chk.Checked)
+            {
+                // Code to execute when the CheckBox is checked
+                string script = "alert('Use default password (pass@123)');";
+                ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", script, true);
+                Response.Write("Checkbox is checked.");
+            }
+            else
+            {
+                // Code to execute when the CheckBox is unchecked
+                string script = "alert('Use your password');";
+                ScriptManager.RegisterStartupScript(this, GetType(), "ServerControlScript", script, true);
+                Response.Write("Checkbox is unchecked.");
+            }
+        }
+
     }
 
-}
+    }

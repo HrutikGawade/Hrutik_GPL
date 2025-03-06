@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GPL {
-    
-    
-    public partial class WebForm1 {
-        
+namespace GPL
+{
+
+
+    public partial class WebForm1
+    {
+
         /// <summary>
         /// form2 control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace GPL {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form2;
-        
+
         /// <summary>
         /// LoginTxt control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace GPL {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox LoginTxt;
-        
+
         /// <summary>
         /// LoginID control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace GPL {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LoginID;
-        
+
         /// <summary>
         /// lblMessage control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace GPL {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMessage;
-        
+
         /// <summary>
         /// PasswordID control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace GPL {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox PasswordID;
-        
+
         /// <summary>
         /// PassID control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace GPL {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label PassID;
-        
+
         /// <summary>
         /// SignUp control.
         /// </summary>
@@ -74,7 +76,25 @@ namespace GPL {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button SignUp;
-        
+
+        /// <summary>
+        /// Frg_pass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Frg_pass;
+
+        /// <summary>
+        /// chk control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chk;
+
         /// <summary>
         /// SubmitID control.
         /// </summary>
@@ -83,7 +103,7 @@ namespace GPL {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button SubmitID;
-        
+
         /// <summary>
         /// CancelID control.
         /// </summary>
